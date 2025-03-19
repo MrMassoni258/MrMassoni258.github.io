@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ type }} для {{ device_id }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>{{ type }} для {{ device_id }}</h1>
+    <ul>
+        {% for file in files %}
+            <li><a href="/storage/{{ device_id }}/{{ type }}/{{ file }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/storage">Назад</a>
+</body>
+</html>

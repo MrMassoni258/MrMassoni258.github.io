@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Хранилище</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Хранилище</h1>
+    <ul>
+        {% for device in devices %}
+            <li><a href="/storage/{{ device }}/screenshots">Скриншоты {{ device }}</a></li>
+            <li><a href="/storage/{{ device }}/videos">Видео {{ device }}</a></li>
+            <li><a href="/storage/{{ device }}/photos">Фото {{ device }}</a></li>
+            <li><a href="/storage/{{ device }}/sounds">Звук {{ device }}</a></li>
+            <li><a href="/storage/{{ device }}/camera">Камера {{ device }}</a></li>
+            <li><a href="/storage/{{ device }}/microphone">Микрофон {{ device }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/dashboard">Назад</a>
+</body>
+</html>

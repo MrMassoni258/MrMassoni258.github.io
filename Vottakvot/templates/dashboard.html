@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель управления</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Панель управления</h1>
+    <h2>Устройства</h2>
+    <ul>
+        {% for device in devices %}
+            <li>{{ device }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Отправить команду</h2>
+    <form method="POST">
+        <label>Устройство:</label>
+        <input type="text" name="device_id"><br>
+        <label>Команда:</label>
+        <input type="text" name="command"><br>
+        <label>Параметры:</label>
+        <input type="text" name="params"><br>
+        <button type="submit">Отправить</button>
+    </form>
+    <a href="/storage">Хранилище</a>
+</body>
+</html>
